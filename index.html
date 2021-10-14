@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-<title> Best practices CSS </title>
+	<title> Best practices CSS </title>
 
-
-
-	<link rel='stylesheet' href='style.css' type='text/css'>
-
-
+ 	<link rel='stylesheet' href='style.css'/>
 </head>
 <body>
-<div class="title">
-<h1>CSS Designs </h1>
-</div>
-	<div class="sidenav">
-	<a href="#about">About</a>
-	<a href="#services">Services</a>
-	<a href="#clients">Clients</a>
-	<a href="#contact">Contact</a>
-	<button class="dropdown-btn"> Designs
-		<i class="fa fa-caret-down"></i>
-	</button>
-	<div class="dropdown-container">
-		<a href="#">Design 1</a>
-		<a href="#">Design 2</a>
-		<a href="#">Design 3</a>
+
+	<div class="header">
+		<div class="header background">
+		<p class="title"> CSS Best Practices </p>
+		</div>
 	</div>
+
+	<div class="navigation">
+		<div class="navigation background-fade">
+			<div class="dropdown">
+				<button class="button">Referenzwebsite</button>
+				<div class="dropdown-content">
+				  <a href="#">Referenzwebsite ohne CSS</a>
+				  <a href="#">Referenzwebsite mit CSS</a>
+				</div>
+			  </div>
+		</div>
 	</div>
-	<div class="mainnav">
-	<h1 class="mainnav.position">Design</h1>
-	</div>
-	 
+
+<div class="main">
+	<div class="main font">
+		<div class="main margin">
+		<div class="text">
+
+	<h1 class="text-title-big">CSS Best Practices</h1>
+	
+	<h2 class="text-title-small">1. Klassen & Unterklassen</h2>
+
+	<p class="text-para">Diese Website wurde aufgrund meiner Maturaarbeit erstellt. Dabei versuche mithilfe von "CSS Best Practices" die CSS-Datei möglichst effizient und
+		ordentlich zu gestalten. Die Unterklassen (engl. subclasses) sind dabei sehr entscheidend. Sie können die Eigenschaften der Klassen (engl. class) überschreiben und somit kann 
+		man sich sehr viele Wiederholungen ersparen. <br>
+		Angenommen man fügt eine Klasse namens "text" dem ganzen Text die Eigenschaften Grösse, Schriftart, linksorientiert hinzu. Nun möchte man jedoch, dass der Titel zentriert ist.
+		Man könnte eine neue Klasse erstellen und somit die ganzen Eigenschaften nochmals aufschreiben. Oder man erstellt eine Unterklasse namens "text-title" und überschreibt die   
+		Eigenschaft "linksorientiert" zu "zentriert" (Abb. 1). Nun ist der Titel zentriert, jedoch bleibt der restliche Text des Abschnitts linksorientiert.</p>
+
+	<h2 class="text-title-small">2. Variablen</h2>
+
+	<p class="text-para"> Es gibt in der CSS-Datei viele Werte, die sich öfters wiederholen, daher ist es von Nutzen diese Werte durch Variablen zu ersetzen. In der 
+		Pseudoklasse ":root" kann man die Werte festlegen, welche dann auf mehrere andere Klassen überwiesen, welche die Variable besitzen. Bei der Pseudoklasse ":root" setzt man
+		beispielsweise den Namen --main-color und danach setzt man den Farbwert rgb(0,0,0). Der Befehl sieht dann wiefolgt aus: --main-color: rgb(0,0,0);. (Abb. 2) <br>
+		Bei den Klassen wird der Name der Befehl für Farbe und danach die Variable aufgeschrieben. --> color: var(--main-color);</p>
+	<h2 class="text-title-small">3. Organisation des Stylesheets</h2>
+
+	<p class="text-para"> Neben dem Versuch Wiederholungen zu vermeiden ist es sehr wichtig die Datei leserlich zu halten. Umso grösser die Datei wird, desto wichtiger wird 
+		dieser Punkt. Dabei sollte man die Formatierung der Datei immer gleich halten. Eine systematische Strukturierung ist auch sehr wichtig, einzelne Selektoren, sowie Eigenschaften
+		schnell zu finden.</p>
+		</div>
+		<div class="pictures">
+		<img class="maincontent-picture-1" src="file:///E:/Schule/Maturaarbeit/pages/pictures/subclass.png" alt="Subclass">
+		<p class="maincontent-picture-1-abb">Abbildung 1</p>
+		<img class="maincontent-picture-1" src="file:///E:/Schule/Maturaarbeit/pages/pictures/variable.png" alt="Variable">
+		<p class="maincontent-picture-2-abb">Abbildung 2</p>
+				</div>
+			</div>
+		</div>
+	</div>	 
 </body>
-<script src="js/script.js"></script>
 
-
-
-
-
-</html>
